@@ -782,7 +782,7 @@ Error generating stack: `+a.message+`
       .skill-name {
         font-size: 1.1rem;
         font-weight: 600;
-        color: white;
+        color: #60a5fa;
         text-align: center;
         transition: opacity 0.3s ease;
       }
