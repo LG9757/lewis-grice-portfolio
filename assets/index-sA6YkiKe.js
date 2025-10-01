@@ -413,7 +413,7 @@ Error generating stack: `+a.message+`
           background-color: #ffffff;
           border-radius: 0.5rem;
           box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-          padding: 2rem;
+          padding: 3rem;
           margin-bottom: 1.5rem;
           width: 100%;
           max-width: none;
