@@ -390,6 +390,24 @@ Error generating stack: `+a.message+`
           padding-top: 5rem;
         }
 
+        .section-title {
+          font-size: 3rem;
+          font-weight: 800;
+          background: linear-gradient(to right, #2563eb, #7c3aed);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 2rem;
+          text-align: left;
+        }
+
+        @media (max-width: 768px) {
+          .section-title {
+            font-size: 2.5rem;
+          }
+        }
+
+
         /* Content card styles */
         .content-card {
           background-color: #ffffff;
