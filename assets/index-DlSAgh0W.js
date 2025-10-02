@@ -898,7 +898,7 @@ Error generating stack: `+a.message+`
 
         .contact-form label {
           font-weight: 600;
-          color: #333;
+          color: #ffffffff;
         }
 
         .contact-form input[type="text"],
@@ -906,7 +906,7 @@ Error generating stack: `+a.message+`
         .contact-form textarea {
           padding: 0.75rem 1rem;
           font-size: 1rem;
-          border: 2px solid #ccc;
+          border: 2px solid #000000ff;
           border-radius: 0.5rem;
           resize: vertical;
         }
