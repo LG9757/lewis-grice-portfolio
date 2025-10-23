@@ -1,12 +1,41 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I wanted to build a modern portfolio to showcase my projects, skills, and contact details.
 
-Currently, two official plugins are available:
+[View Live Site](https://lg9757.github.io/lewis-grice-portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **React** - Frontend framework
+- **JavaScript** - Programming language
+- **CSS** - Styling and animations
+- **HTML5** - Semantic markup
+- **Vite** - Build tool and development server
+- **EmailJS** - Contact form email service
+- **Git/GitHub** - Version control and deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+lewis-grice-portfolio/  
+├── src/  
+│ ├── assets/ # Images and logos  
+│ ├── App.jsx # Main application component  
+│ ├── App.css # Application styles  
+│ ├── main.jsx # React entry point   
+├── public/ # Static assets  
+├── package.json # Dependencies and scripts  
+└── vite.config.js # Vite configuration
+
+## Running
+
+### Prerequisites
+
+- **Node.js** (v14 or higher)
+- **npm** - package manager
+
+### Installation
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies
+4. Run the development server
