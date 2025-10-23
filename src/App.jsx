@@ -14,6 +14,7 @@ import nodejsLogo from "./assets/Nodejs logo.png";
 import haskellLogo from "./assets/Haskell logo.png";
 import linkedinLogo from "./assets/linkedin logo.png";
 import githubLogo from "./assets/github logo.png";
+import f1strategyImg from "./assets/f1 strategy.png";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('overview');
@@ -154,12 +155,12 @@ const Portfolio = () => {
                   <User size={120} className="profile-icon" />
                 </div>
                 <h1 className="hero-title">Hi, I'm Lewis</h1>
-                <p className="hero-subtitle">Computer Science and AI Student | Aspiring Software Developer</p>
+                <p className="hero-subtitle">Computer Science and AI Student | Aspiring Computer Scientist</p>
               </div>
             </div>
             <div className="content-card">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">About Me</h2>
-              <p className="text-gray-600 text-lg mb-4">I’m a 3rd year Computer Science and AI student at the University of Bath, passionate about machine learning, problem solving, and building impactful software. Some of my highlights include a spam filter model with 94% accuracy and group projects such as a budgeting web app. Outside of academics, I enjoy fitness, travelling, and meeting new people. I’m seeking a summer internship to further develop my skills.</p>
+              <p className="text-gray-600 text-lg mb-4">I’m a 3rd year Computer Science and AI student at the University of Bath. I am passionate about machine learning, problem solving, and building impactful software. Some of my highlights include a spam filter model with 94% accuracy and group projects such as a budgeting web app. Outside of academics, I enjoy fitness, travelling, and meeting new people. I’m seeking an industrial placement year to further develop my skills.</p>
             </div>
             <button onClick={() => scrollToSection('projects')} className="next-section-btn">
               <span>View Projects</span>
@@ -183,7 +184,7 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="project-content">
-                  <h2 className="project-title">Lewis Grice Portfolio</h2>
+                  <h2 className="project-title">Personal Portfolio Website</h2>
                   
                   <div className="project-section">
                     <h3 className="project-subheading">Description</h3>
@@ -209,18 +210,61 @@ const Portfolio = () => {
                   <a 
                     href="https://github.com/LG9757/lewis-grice-portfolio" 
                     target="_blank" 
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" 
                     className="github-link"
                   >
-                    <svg 
-                      className="github-icon" 
-                      viewBox="0 0 24 24" 
-                      fill="currentColor"
-                    >
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
+                    <img src={githubLogo} alt="GitHub" className="github-icon" />
                     View on GitHub
                   </a>
+
+                </div>
+              </div>
+            </div>
+
+            <div className="content-card">
+              <div className="project-block reverse">
+                <div className="project-image-container">
+                  <img
+                    src={f1strategyImg}
+                    alt="F1 Strategy"
+                    className="project-image"
+                  />
+                </div>
+                
+                <div className="project-content">
+                  <h2 className="project-title">F1 Strategy model</h2>
+                  
+                  <div className="project-section">
+                    <h3 className="project-subheading">Description</h3>
+                    <p className="project-text">
+                      This project is a machine learning model that predicts the optimal strategy for Formula 1 races. I did it to enhance my skills in data analysis and machine learning, and use xgboost for the first time as well as experiment with techniques for hyperparameter tuning.
+                    </p>
+                  </div>
+                  
+                  <div className="project-section">
+                    <h3 className="project-subheading">Skills Used</h3>
+                    <p className="project-text">
+                      Python, Pandas, XGBoost, Matplotlib, SKLearn
+                    </p>
+                  </div>
+                  
+                  <div className="project-section">
+                    <h3 className="project-subheading">Future Work</h3>
+                    <p className="project-text">
+                      I plan to further improve this model by experimenting with different algorithms, to improve accuracy and eventually add handling for wet weather tyres.
+                    </p>
+                  </div>
+                  
+                  <a 
+                    href="https://github.com/LG9757/f1-strategy-model" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="github-link"
+                  >
+                    <img src={githubLogo} alt="GitHub" className="github-icon" />
+                    View on GitHub
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -1050,6 +1094,31 @@ const Portfolio = () => {
         line-height: 1.6;
       }
 
+      .project-block.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .project-block.reverse .project-image-container::after {
+        right: auto;
+        left: 0;
+        transform: translateX(-50%) scaleX(-1);
+      }
+
+      .project-block.reverse .project-content {
+        padding: 3rem 4rem 2rem 3rem;
+      }
+
+      @media (max-width: 968px) {
+        .project-block.reverse {
+          flex-direction: column;
+        }
+        
+        .project-block.reverse .project-content {
+          padding: 3rem 2rem 2rem 2rem;
+        }
+      }
+
+
       .github-link {
         display: inline-flex;
         align-items: center;
@@ -1074,6 +1143,7 @@ const Portfolio = () => {
       .github-icon {
         width: 24px;
         height: 24px;
+        filter: brightness(0) invert(1);
       }
 
       /* Responsive Design */
