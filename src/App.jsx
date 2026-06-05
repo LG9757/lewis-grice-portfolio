@@ -17,18 +17,18 @@ import linkedinLogo from "./assets/linkedin logo.png";
 import githubLogo from "./assets/github logo.png";
 import f1strategyImg from "./assets/f1 strategy.png";
 
+const sections = [
+  { id: 'overview', label: 'Overview', icon: User },
+  { id: 'projects', label: 'Projects', icon: FolderOpen },
+  { id: 'skills', label: 'Skills', icon: Award },
+  { id: 'contact', label: 'Contact', icon: MessageSquare }
+];
+
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('overview');
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-
-  const sections = [
-    { id: 'overview', label: 'Overview', icon: User },
-    { id: 'projects', label: 'Projects', icon: FolderOpen },
-    { id: 'skills', label: 'Skills', icon: Award },
-    { id: 'contact', label: 'Contact', icon: MessageSquare }
-  ];
 
   useEffect(() => {
     const observerOptions = {
@@ -132,13 +132,11 @@ const Portfolio = () => {
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
+                    aria-label={section.label}
                     className={`nav-button ${activeSection === section.id ? 'active' : ''}`}
                   >
                     <IconComponent size={16} className="icon" />
-                    {section.label}
-                    {activeSection === section.id && (
-                      <div className="pulse-overlay"></div>
-                    )}
+                    <span className="nav-label">{section.label}</span>
                   </button>
                 );
               })}
@@ -161,7 +159,7 @@ const Portfolio = () => {
             </div>
             <div className="content-card">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">About Me</h2>
-              <p className="text-gray-600 text-lg mb-4">I’m a 3rd year Computer Science and AI student at the University of Bath. I am passionate about machine learning, problem solving, and building impactful software. Some of my highlights include a spam filter model with 94% accuracy and group projects such as a budgeting web app. Outside of academics, I enjoy fitness, travelling, and meeting new people. I’m seeking an industrial placement year to further develop my skills.</p>
+              <p className="text-gray-600 text-lg mb-4">I&apos;m a 3rd year Computer Science and AI student at the University of Bath. I am passionate about machine learning, problem solving, and building impactful software. Some of my highlights include a spam filter model with 94% accuracy and group projects such as a budgeting web app. Outside of academics, I enjoy fitness, travelling, and meeting new people. I&apos;m seeking an industrial placement year to further develop my skills.</p>
             </div>
             <button onClick={() => scrollToSection('projects')} className="next-section-btn">
               <span>View Projects</span>
@@ -174,7 +172,7 @@ const Portfolio = () => {
           <div className="animate-fadeIn">
             <h1 className="section-title">Projects</h1>
             
-            <div className="content-card">
+            <div className="project-shell">
               <div className="project-block">
                 <div className="project-image-container">
                   <img
@@ -222,7 +220,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="content-card">
+            <div className="project-shell">
               <div className="project-block reverse">
                 <div className="project-image-container">
                   <img
@@ -233,12 +231,12 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="project-content">
-                  <h2 className="project-title">F1 Strategy model</h2>
+                  <h2 className="project-title">F1 Strategy Model</h2>
                   
                   <div className="project-section">
                     <h3 className="project-subheading">Description</h3>
                     <p className="project-text">
-                      This project is a machine learning model that predicts the optimal strategy for Formula 1 races. I did it to enhance my skills in data analysis and machine learning, and use xgboost for the first time as well as experiment with techniques for hyperparameter tuning.
+                      This project is a machine learning model that predicts the optimal strategy for Formula 1 races. I did it to enhance my skills in data analysis and machine learning, and use XGBoost for the first time as well as experiment with techniques for hyperparameter tuning.
                     </p>
                   </div>
                   
@@ -460,11 +458,10 @@ const Portfolio = () => {
                   placeholder="Write your message..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  style={{ height: '150px' }}
                 />
                 <div className="message-count">{message.length}/500</div>
 
-                <button type="button" onClick={handleSubmit}>Send</button>
+                <button type="button" onClick={handleSubmit}>Send Message</button>
               </div>
             </div>
             <div className="social-links">
@@ -492,7 +489,7 @@ const Portfolio = () => {
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="px-6 py-6">
           <div className="text-center text-gray-600 text-sm">
-            © 2025 Lewis Grice
+            &copy; 2025 Lewis Grice
           </div>
         </div>
       </footer>
